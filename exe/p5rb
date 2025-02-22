@@ -2,4 +2,4 @@
 
 require "p5rb_cli"
 
-p "hi"
+P5rbCli::Cli.start(ARGV)
