@@ -10,7 +10,7 @@ module P5rbCli
       true
     end
   
-    desc "new NAME", "Create a new p5rb script"
+    desc "new NAME", "Create a new p5.rb script"
     def new(name)
       if FileTest.exist?(name)
         raise Thor::Error, "ERROR: '#{File.absolute_path(name)}' already exists"
@@ -18,5 +18,11 @@ module P5rbCli
   
       p name
     end
+
+    desc "run SCRIPT_FILE", "Run p5.rb script on server"
+    def run_command(script_file)
+      p "run #{script_file}"
+    end
+    map "run" => "run_command"
   end
 end
