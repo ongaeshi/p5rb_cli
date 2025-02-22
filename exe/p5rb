@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require "p5rb_cli"
+
+p "hi"
