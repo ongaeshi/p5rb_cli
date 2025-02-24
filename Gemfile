@@ -12,3 +12,5 @@ gem "test-unit", "~> 3.0"
 gem "standard", "~> 1.3"
 
 gem "thor", "~> 1.3"
+
+gem "webrick", "~> 1.9"
