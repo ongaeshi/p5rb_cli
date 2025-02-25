@@ -19,6 +19,9 @@ def run_web_app(script_file)
     when "/p5.rb"
       res.body = File.read(File.join(static_root, 'p5.rb'))
       res.content_type = 'application/ruby'
+    when "/style.css"
+      res.body = File.read(File.join(static_root, 'style.css'))
+      res.content_type = 'text/css'
     when "/main.rb"
       res.body = File.read(script_file)
       res.content_type = 'application/ruby'
