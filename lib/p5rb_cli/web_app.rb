@@ -13,11 +13,11 @@ def run_web_app(script_file)
     when "/" || "/index.html"
       res.body = File.read(File.join(static_root, 'index.html'))
       res.content_type = 'text/html'
-    when "/main.js"
-      res.body = File.read(File.join(static_root, 'main.js'))
+    when "/p5editor.js"
+      res.body = File.read(File.join(static_root, 'p5editor.js'))
       res.content_type = 'application/javascript'
-    when "/p5.rb"
-      res.body = File.read(File.join(static_root, 'p5.rb'))
+    when "/p5editor.rb"
+      res.body = File.read(File.join(static_root, 'p5editor.rb'))
       res.content_type = 'application/ruby'
     when "/style.css"
       res.body = File.read(File.join(static_root, 'style.css'))
