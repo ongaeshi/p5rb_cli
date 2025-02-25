@@ -11,13 +11,6 @@ nav {
     font-size: 1.1rem;
 }
 
-.CodeMirror {
-    border: 1px solid #eee;
-    height: 240px;
-    font-size: 16px;
-    max-width: 1024px;
-}
-
 @media (min-width: 768px) { /* Medium(md) */
     .CodeMirror {
         height: 320px;
