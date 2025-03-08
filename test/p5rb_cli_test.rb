@@ -8,8 +8,4 @@ class P5rbCliTest < Test::Unit::TestCase
       ::P5rbCli.const_defined?(:VERSION)
     end
   end
-
-  test "something useful" do
-    assert_equal("expected", "actual")
-  end
 end
