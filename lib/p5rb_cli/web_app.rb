@@ -26,8 +26,17 @@ def run_web_app(script_file)
       res.body = File.read(script_file)
       res.content_type = 'application/ruby'
     else
-      res.body = "Not Found"
-      res.status = 404
+      path = File.join(File.dirname(script_file), req.path)
+      if File.exist?(path)
+        res.body = File.binread(path)
+        res.content_type = case File.extname(path)
+          when ".png" then 'image/png'
+          else 'application/octet-stream'
+        end
+      else
+        res.body = "Not Found"
+        res.status = 404
+      end
     end
   end
   trap('INT') { server.shutdown }
