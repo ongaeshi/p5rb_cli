@@ -1,6 +1,11 @@
 require 'webrick'
 
 def run_web_app(script_file)
+  if script_file.nil? || !File.exist?(script_file)
+    puts "Not found script file: #{script_file}"
+    return
+  end
+
   root = File.join(File.dirname(script_file))
   server = WEBrick::HTTPServer.new(
     Port: 8000,
