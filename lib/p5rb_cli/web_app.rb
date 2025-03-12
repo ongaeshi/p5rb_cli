@@ -36,6 +36,7 @@ def run_web_app(script_file)
         res.body = File.binread(path)
         res.content_type = case File.extname(path)
           when ".png" then 'image/png'
+          when ".jpg" then 'image/jpeg'
           else 'application/octet-stream'
         end
       else
