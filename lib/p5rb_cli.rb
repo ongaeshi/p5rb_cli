@@ -13,11 +13,27 @@ module P5rbCli
   
     desc "new NAME", "Create a new p5.rb script"
     def new(name)
+      name += ".rb" unless name.end_with?(".rb")
+
       if FileTest.exist?(name)
-        raise Thor::Error, "ERROR: '#{File.absolute_path(name)}' already exists"
+      raise Thor::Error, "ERROR: '#{File.absolute_path(name)}' already exists"
       end
-  
-      p name
+    
+      File.write(name, <<~CODE)
+        def setup
+          createCanvas(400, 400)
+          background(200)
+        end
+
+        def draw
+          background(200)
+          (0..width).step(50) do |x|
+            (0..height).step(50) do |y|
+              ellipse(x, y, 40, 40)
+            end
+          end
+        end
+      CODE
     end
 
     desc "run SCRIPT_FILE", "Run p5.rb script on server"
