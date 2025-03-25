@@ -65,7 +65,7 @@ def draw
   noStroke
 
   # Tile pattern positions
-  (50..350).step(50).each do |x|
+(50..350).step(50).each do |x|
     (50..350).step(50).each do |y|
       push
       translate(x, y) # Move to the tile position
