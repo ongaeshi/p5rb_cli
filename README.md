@@ -1,6 +1,6 @@
 # p5.rb CLI
 
-p5.rb CLI is is a command-line tool for creating p5.js-like sketches using Ruby. 
+p5.rb CLI is a command-line tool that makes it easy to start creative coding with Ruby, inspired by p5.js. Create interactive animations and visual art using Ruby's simple and elegant syntax.
 
 ## Installation
 
@@ -10,28 +10,49 @@ gem install p5rb_cli
 
 ## Usage
 
-After installing the gem, you can use the following commands:
+After installation, you can use the following commands:
 
-- **Create a new p5.rb sketch**:
-    ```bash
-    p5rb new <sketch_name>
-    ```
-    This will generate a new p5.rb sketch in the specified directory.
+### Create a New Sketch
 
-- **Run a p5.rb sketch**:
-    ```bash
-    p5rb run <sketch_name>
-    ```
-    This will execute the specified sketch.
+```bash
+p5rb new <NAME>
+```
 
-For more detailed usage, run:
+This command generates a new p5.rb sketch in the specified directory. The generated sketch includes basic setup and sample code.
+
+### Run a Sketch
+
+```bash
+p5rb run <SCRIPT_FILE>
+```
+
+This command runs the specified sketch on a local server and displays it in your browser. The browser automatically updates when you make changes to your code.
+
+### Other Commands
+
+To see detailed usage information:
+
 ```bash
 p5rb help
 ```
 
+## Sample Code
+
+```ruby
+def setup
+  createCanvas(400, 400)
+  background(220)
+end
+
+def draw
+  fill(255, 0, 0)
+  circle(mouseX, mouseY, 50)
+end
+```
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [p5rb_cli repository](https://github.com/ongaeshi/p5rb_cli).
+Bug reports and pull requests are welcome on GitHub at the [p5rb_cli repository](https://github.com/ongaeshi/p5rb_cli).
 
 ## License
 
