@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["ongaeshi"]
   spec.email = ["ongaeshi0621@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
+  spec.summary = "A CLI tool for creating p5.js-like sketches using Ruby."
+  spec.description = "p5.rb CLI is a command-line tool that allows you to create p5.js-like sketches using Ruby. It provides commands to generate new sketches and run them in a local web server."
   spec.homepage = "https://github.com/ongaeshi/p5rb_cli"
   spec.required_ruby_version = ">= 3.0.0"
 
